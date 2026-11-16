@@ -21,12 +21,12 @@ export const Splash = () => {
   });
 
   return (
-    <div className="flex relative flex-col justify-center items-center min-h-[460px] p-6 bg-gradient-to-b from-[#0e1113] via-[#14171a] to-[#0c0d0e] text-white select-none">
-      {/* Decorative background glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-32 bg-orange-500/10 blur-3xl pointer-events-none rounded-full" />
+    <div className="flex relative flex-col justify-center items-center min-h-[460px] p-6 bg-gradient-to-b from-[#f8fafc] via-[#f1f5f9] to-[#ffffff] text-slate-800 select-none">
+      {/* Subtle warm decorative glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-32 bg-orange-400/10 blur-3xl pointer-events-none rounded-full" />
 
       {/* Header Pill */}
-      <div className="flex items-center gap-2 px-3 py-1 mb-3 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-xs font-semibold tracking-wider uppercase">
+      <div className="flex items-center gap-2 px-3 py-1 mb-3 rounded-full bg-orange-50 border border-orange-200/80 text-orange-600 text-xs font-bold tracking-wider uppercase shadow-2xs">
         <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
         Subdle Daily #{puzzleNum}
       </div>
@@ -34,54 +34,54 @@ export const Splash = () => {
       {/* Title & Snoo Mascot */}
       <div className="flex items-center justify-center gap-3 mb-2">
         <img
-          className="w-12 h-12 object-contain drop-shadow-[0_4px_12px_rgba(255,69,0,0.35)]"
+          className="w-12 h-12 object-contain drop-shadow-sm"
           src="/snoo.png"
           alt="Snoo"
         />
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-white via-gray-100 to-orange-400 bg-clip-text text-transparent">
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
           Subdle
         </h1>
       </div>
 
-      <p className="text-sm sm:text-base text-gray-400 text-center max-w-sm mb-5 leading-snug">
-        Can you guess today's mystery subreddit in <span className="text-orange-400 font-semibold">4 clues</span> or fewer?
+      <p className="text-sm sm:text-base text-slate-600 text-center max-w-sm mb-5 leading-snug font-medium">
+        Can you guess today's mystery subreddit in <span className="text-orange-600 font-bold">4 clues</span> or fewer?
       </p>
 
       {/* Clues Preview Grid */}
-      <div className="grid grid-cols-2 gap-2 w-full max-w-xs mb-6 text-xs">
-        <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300">
+      <div className="grid grid-cols-2 gap-2.5 w-full max-w-xs mb-6 text-xs">
+        <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs text-slate-700">
           <span className="text-base">👥</span>
           <div>
-            <div className="text-[10px] text-gray-400 uppercase font-semibold">Clue 1</div>
-            <div>Audience & Age</div>
+            <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wide">Clue 1</div>
+            <div className="font-semibold text-slate-800">Audience & Age</div>
           </div>
         </div>
-        <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300">
+        <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs text-slate-700">
           <span className="text-base">🏷️</span>
           <div>
-            <div className="text-[10px] text-gray-400 uppercase font-semibold">Clue 2</div>
-            <div>Category Tag</div>
+            <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wide">Clue 2</div>
+            <div className="font-semibold text-slate-800">Category Tag</div>
           </div>
         </div>
-        <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300">
+        <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs text-slate-700">
           <span className="text-base">🤫</span>
           <div>
-            <div className="text-[10px] text-gray-400 uppercase font-semibold">Clue 3</div>
-            <div>Top Post (Redacted)</div>
+            <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wide">Clue 3</div>
+            <div className="font-semibold text-slate-800">Top Post (Redacted)</div>
           </div>
         </div>
-        <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300">
+        <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs text-slate-700">
           <span className="text-base">📜</span>
           <div>
-            <div className="text-[10px] text-gray-400 uppercase font-semibold">Clue 4</div>
-            <div>Signature Rule</div>
+            <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wide">Clue 4</div>
+            <div className="font-semibold text-slate-800">Signature Rule</div>
           </div>
         </div>
       </div>
 
       {/* Play Action Button */}
       <button
-        className="group relative flex items-center justify-center gap-2 w-full max-w-xs py-3 px-6 rounded-full bg-gradient-to-r from-[#ff4500] to-[#ff5722] hover:from-[#e03d00] hover:to-[#eb4d1b] text-white font-bold text-base shadow-[0_4px_20px_rgba(255,69,0,0.4)] hover:shadow-[0_6px_25px_rgba(255,69,0,0.6)] cursor-pointer transition-all transform active:scale-95"
+        className="group relative flex items-center justify-center gap-2 w-full max-w-xs py-3 px-6 rounded-full bg-gradient-to-r from-[#ff4500] to-[#ea580c] hover:from-[#ea580c] hover:to-[#c2410c] text-white font-bold text-base shadow-sm hover:shadow-md cursor-pointer transition-all transform active:scale-95"
         onClick={(e) => requestExpandedMode(e.nativeEvent, 'game')}
       >
         <span>Play Today's Subdle</span>
@@ -96,27 +96,27 @@ export const Splash = () => {
       </button>
 
       {/* User & Streak Banner */}
-      <div className="flex items-center justify-center gap-4 mt-4 text-xs text-gray-400">
+      <div className="flex items-center justify-center gap-4 mt-4 text-xs text-slate-500 font-medium">
         <span>👤 {context.username ? `u/${context.username}` : 'Redditor'}</span>
         {streak > 0 && (
           <>
-            <span className="text-gray-600">•</span>
-            <span className="text-orange-400 font-semibold">🔥 {streak} Streak</span>
+            <span className="text-slate-300">•</span>
+            <span className="text-orange-600 font-bold">🔥 {streak} Streak</span>
           </>
         )}
       </div>
 
       {/* Footer Links */}
-      <footer className="mt-5 flex gap-3 text-[11px] text-gray-500">
+      <footer className="mt-5 flex gap-3 text-[11px] text-slate-400">
         <button
-          className="cursor-pointer hover:text-gray-300 transition-colors"
+          className="cursor-pointer hover:text-slate-700 transition-colors"
           onClick={() => navigateTo('https://redditgameofday2026.devpost.com/')}
         >
           Reddit Hackathon 2026
         </button>
-        <span className="text-gray-700">•</span>
+        <span className="text-slate-300">•</span>
         <button
-          className="cursor-pointer hover:text-gray-300 transition-colors"
+          className="cursor-pointer hover:text-slate-700 transition-colors"
           onClick={() => navigateTo('https://developers.reddit.com')}
         >
           Devvit Web
